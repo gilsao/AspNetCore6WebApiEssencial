@@ -9,6 +9,7 @@ public class Categoria
 {
     public Categoria()
     {
+        //Inicialização da Propriedade Produto.
         Produtos = new Collection<Produto>();
     }
     [Key]
@@ -21,5 +22,9 @@ public class Categoria
     [StringLength(300)]
     public string? ImagemUrl { get; set; }
 
+    /* Propriedade de navegação que indica ao EF Core o relacionamento entre
+     * as entidades Categoria e Produto.
+     * Nesse caso indicamos que Categoria pode conter uma coleção de Produtos
+    */
     public ICollection<Produto>? Produtos { get; set; }
 }

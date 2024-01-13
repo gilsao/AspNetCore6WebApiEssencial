@@ -28,6 +28,13 @@ namespace APICatalogo.Models
 
         public float Estoque { get; set; }
         public DateTime DataCadastro { get; set; }
+
+        /*
+         * Propriedade de navegação que indica ao EF Core o relacionamento entre as entidades Categoria e Produto.
+         * Nesse caso incluimos uma propriedade CategoriaId que mapeia para a chave estrangeira no banco de dados e uma
+         * propriedade de navegação Categoria para indicar que um Produto está relacionado com uma Categoria.
+         * */
+
         public int CategoriaId { get; set; }
 
         [JsonIgnore]
