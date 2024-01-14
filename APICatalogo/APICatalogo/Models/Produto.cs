@@ -4,6 +4,12 @@ using System.Text.Json.Serialization;
 
 namespace APICatalogo.Models
 {
+    //Aqui usamos Data Annotations para Sobrescrever as conveções padrão do EF Core.
+    //Também podemos usar esse recurso para:
+    //    Definir regras de validação para o modelo
+    //    Definir como os dados devem ser exibidos na interface(*)
+    //    Especificar o relacionamento entre as entidades do modelo
+
     [Table("Produtos")]
     public class Produto
     {

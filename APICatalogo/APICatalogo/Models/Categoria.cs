@@ -7,6 +7,11 @@ namespace APICatalogo.Models;
 [Table("Categorias")]
 public class Categoria
 {
+    //Aqui usamos Data Annotations para Sobrescrever as conveções padrão do EF Core.
+    //Também podemos usar esse recurso para:
+    //    Definir regras de validação para o modelo
+    //    Definir como os dados devem ser exibidos na interface(*)
+    //    Especificar o relacionamento entre as entidades do modelo
     public Categoria()
     {
         //Inicialização da Propriedade Produto.
